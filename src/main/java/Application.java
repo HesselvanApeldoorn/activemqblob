@@ -40,7 +40,6 @@ public class Application {
         connection.start();
 
         BlobMessage message = session.createBlobMessage(new URL("https://raw.githubusercontent.com/HesselvanApeldoorn/activemqblob/master/src/main/java/Application.java"));
-        message.setName("blob filename");
 
         producer.send(message);
         Thread.sleep(1000);
@@ -74,7 +73,7 @@ public class Application {
 
     }
 
-    private void processInputstream(URL url) {
+    private void processByURL(URL url) {
         try {
             ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory("admin", "admin", "tcp://localhost:61616");
             //Establish the connection
