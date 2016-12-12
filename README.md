@@ -1,0 +1,2 @@
+# activemqblob
+tryout for activemqblob
